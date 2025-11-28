@@ -1,23 +1,22 @@
 #                                                 calculator
-user_inp1 =int(input("Enter your first number:"))
-user_inp2 = int(input("Enter your second  number"))
-user_op = input("Enter you operator")
+user_inp1 = int(input("Enter your first number: "))
+user_inp2 = int(input("Enter your second number: "))
+user_op = input("Enter your operator (+, -, *, /): ")
 
-def calculate (a, b,op):
- 
- if (op =="+"):
-   print("Ans", a + b)
+def calculate(a, b, op):
+    if op == "+":
+        print("Ans:", a + b)
+    elif op == "-":
+        print("Ans:", a - b)
+    elif op == "*":
+        print("Ans:", a * b)
+    elif op == "/":
+        if b != 0:
+            print("Ans:", a / b)
+        else:
+            print("Error: Division by zero not allowed")
+    else:
+        print("Invalid operator")
 
- elif(op == "-"):
-   print("Ans", a - b)
- 
- elif(op == "*"):
-    print("Ans",a * b)
-
- elif(op == "/"):
-    if(b != 0):
-     print("Ans", a / b)
-    else:print("Error: Division by zero not allowed")
-
- else:
-   print("Invald operator")
+# Call the function
+calculate(user_inp1, user_inp2, user_op)
